@@ -1,0 +1,33 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowDown, ArrowUpRight, AtSign, Globe, Mail, MessageCircle, Phone } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  title: "Kontak",
+  description: "Hubungi SORARA untuk membicarakan ide atau proyek digital Anda.",
+  alternates: { canonical: "/id/contact" },
+};
+
+function getContactOptions() {
+  const { whatsapp, email, phone, instagram, linkedin } = siteConfig.contact;
+  const options = [
+    whatsapp ? { label: "WhatsApp", detail: "Mulai percakapan langsung", href: `https://wa.me/${whatsapp.replace(/\\D/g, "")}`, icon: MessageCircle, primary: true, external: true } : null,
+    email ? { label: "Email", detail: email, href: `mailto:${email}`, icon: Mail, primary: false, external: false } : null,
+    phone ? { label: "Telepon", detail: phone, href: `tel:${phone.replace(/\\s/g, "")}`, icon: Phone, primary: false, external: false } : null,
+    instagram ? { label: "Instagram", detail: "Ikuti kabar terbaru kami", href: instagram, icon: AtSign, primary: false, external: true } : null,
+    linkedin ? { label: "LinkedIn", detail: "Terhubung melalui LinkedIn", href: linkedin, icon: Globe, primary: false, external: true } : null,
+  ];
+  return options.filter((option): option is NonNullable<typeof option> => option !== null);
+}
+
+export default function IndonesianContactPage() {
+  const options = getContactOptions();
+  return (
+    <>
+      <section className="contact-hero"><div className="wrap contact-hero-grid"><div><p className="eyebrow">Ide baik dimulai dari percakapan</p><h1 className="display-title">Punya ide?<br />Mari <span>wujudkan.</span></h1><p className="contact-intro">Punya proyek, membutuhkan situs web, atau ingin menjajaki solusi digital untuk bisnis? Mari bicara.</p><a className="contact-scroll" href="#contact-options">Pilih cara untuk menyapa <ArrowDown size={16} /></a></div><div className="contact-art" aria-hidden="true"><div className="contact-circle"><span>MARI<br /><b>WUJUDKAN</b><br />IDE</span></div><div className="contact-spark contact-spark-one">✳</div><div className="contact-spark contact-spark-two">✳</div><span className="contact-art-label">AJAKAN<br />TERBUKA</span></div></div></section>
+      <section className="contact-options section-pad" id="contact-options"><div className="wrap contact-options-grid"><div><p className="eyebrow">Langsung, personal, sederhana</p><h2 className="display-title">Mulai dari<br /><span>sapaan.</span></h2><p>Ceritakan apa yang sedang Anda pikirkan. Kami akan mendengarkan, mengajukan beberapa pertanyaan, lalu menentukan langkah berikutnya bersama.</p><div className="contact-note"><span>01</span><p>Tanpa formulir dan pertanyaan anggaran. Percakapan langsung saat Anda siap.</p></div></div><div className="contact-list">{options.length ? options.map(({ label, detail, href, icon: Icon, primary, external }) => <a className={primary ? "contact-option primary" : "contact-option"} href={href} key={label} rel={external ? "noreferrer" : undefined} target={external ? "_blank" : undefined}><span className="contact-option-icon"><Icon size={20} /></span><span className="contact-option-text"><b>{label}</b><small>{detail}</small></span><ArrowUpRight size={18} /></a>) : <div className="contact-unconfigured"><span className="contact-option-icon"><MessageCircle size={20} /></span><div><b>Kanal kontak pribadi sedang disiapkan.</b><p>SORARA sedang menyiapkan kanal komunikasi langsung. Silakan kembali lagi nanti.</p></div></div>}<span className="contact-list-foot">KAMI SIAP MENDENGARKAN.</span></div></div></section>
+      <section className="contact-bottom"><div className="wrap contact-bottom-inner"><span className="eyebrow">Langkah kecil pertama</span><p>Bawa ide yang masih kasar, pertanyaan yang belum terjawab, atau keinginan untuk membuat sesuatu lebih baik.</p><Link href="/id/work">Butuh inspirasi? <ArrowUpRight size={16} /></Link></div></section>
+    </>
+  );
+}

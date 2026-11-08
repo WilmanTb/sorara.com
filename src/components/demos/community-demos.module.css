@@ -1,0 +1,299 @@
+.demo {
+  min-height: 100vh;
+  color: #242720;
+  font-family: var(--font-body), sans-serif;
+}
+
+.previewBar {
+  position: relative;
+  z-index: 20;
+  display: grid;
+  min-height: 43px;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e6e5e0;
+  padding: 0 24px;
+  background: #fff;
+  color: #4a4b46;
+  font-family: var(--font-mono), monospace;
+  font-size: 9px;
+  letter-spacing: .045em;
+}
+
+.backLink,
+.previewLabel,
+.languageLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backLink { width: fit-content; color: inherit; text-decoration: none; }
+.previewLabel { justify-content: center; color: #777870; }
+.previewLabel i { width: 6px; height: 6px; border-radius: 50%; background: #83aa68; }
+.languageLinks { justify-content: flex-end; }
+.languageLinks a { border-radius: 3px; padding: 5px 6px; color: #6e6f69; text-decoration: none; }
+.languageLinks a[aria-current="page"] { background: #eeeee9; color: #232420; }
+
+.communityFooter {
+  display: flex;
+  min-height: 68px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 12px clamp(18px, 5vw, 75px);
+  background: #242923;
+  color: #e9eee7;
+  font-family: var(--font-mono), monospace;
+  font-size: 8px;
+  letter-spacing: .08em;
+}
+
+.communityFooter a { color: inherit; font-family: var(--font-display), sans-serif; font-size: 18px; font-weight: 600; letter-spacing: 0; text-decoration: none; }
+.communityFooter a span { color: #c9e6a8; }
+
+.churchSite { min-height: calc(100vh - 43px); background: #f6f5ef; color: #273b33; }
+.churchHeader { display: grid; min-height: 70px; grid-template-columns: 1fr 1.4fr 1fr; align-items: center; padding-inline: clamp(18px, 5vw, 80px); background: #f6f5ef; }
+.churchLogo { display: inline-flex; width: fit-content; align-items: center; gap: 8px; color: #26443a; font-family: var(--font-display), sans-serif; font-size: 21px; font-weight: 600; text-decoration: none; }
+.churchMark { display: grid; width: 27px; height: 27px; place-items: center; border-radius: 50%; background: #dce8d1; color: #42634b; font-size: 15px; }
+.logoDot { color: #b26c4f; }
+.churchHeader nav { display: flex; justify-content: center; gap: 25px; }
+.churchHeader nav a { color: #67756b; font-size: 10px; text-decoration: none; }
+.churchHeader nav a:hover { color: #294d3f; }
+.churchVisitLink { display: inline-flex; align-items: center; justify-self: end; gap: 8px; border-bottom: 1px solid #456752; padding: 7px 0; color: #365642; font-size: 10px; text-decoration: none; }
+.churchHero { position: relative; display: flex; min-height: clamp(420px, 57vw, 625px); align-items: center; overflow: hidden; background: #263d33; color: #fffdf6; }
+.churchHero > img { object-fit: cover; object-position: center 52%; }
+.churchHeroShade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(28, 48, 41, .81), rgba(28, 48, 41, .2) 70%); }
+.churchHeroCopy { position: relative; z-index: 1; width: min(790px, 100%); padding: 70px clamp(22px, 9vw, 132px) 86px; }
+.churchHeroCopy > span,
+.churchHeroFoot,
+.churchIntro > span,
+.churchIntro > div > span,
+.sectionHeading > div > span,
+.eventGrid article > small,
+.visitSection > div > span { font-family: var(--font-mono), monospace; font-size: 8px; letter-spacing: .12em; }
+.churchHeroCopy > span { color: #d6e5c4; }
+.churchHeroCopy h1 { margin: 18px 0 15px; font-family: var(--font-display), sans-serif; font-size: clamp(52px, 8vw, 96px); font-weight: 500; line-height: .94; white-space: pre-line; }
+.churchHeroCopy p { max-width: 390px; margin: 0; color: rgba(255,253,246,.8); font-size: 13px; line-height: 1.75; }
+.churchHeroCopy > a { display: inline-flex; align-items: center; gap: 10px; margin-top: 25px; border-radius: 3px; padding: 12px 14px; background: #d8e6c6; color: #2f4a38; font-size: 10px; font-weight: 600; text-decoration: none; }
+.churchHeroFoot { position: absolute; right: 24px; bottom: 17px; left: 24px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,.35); padding-top: 9px; color: rgba(255,255,255,.75); font-size: 7px; }
+.churchIntro { display: grid; min-height: 135px; grid-template-columns: .7fr 1fr auto; align-items: center; gap: 20px; border-bottom: 1px solid #e5e6dc; padding: 25px clamp(18px, 8vw, 115px); background: #e8edde; }
+.churchIntro > span { color: #6c8065; }
+.churchIntro h2 { margin: 0 0 6px; color: #30493a; font-family: var(--font-display), sans-serif; font-size: 25px; font-weight: 500; }
+.churchIntro p { display: flex; align-items: center; gap: 7px; margin: 0; color: #74796d; font-size: 9px; }
+.churchIntro > a { display: inline-flex; align-items: center; gap: 8px; color: #47664e; font-size: 9px; text-decoration: none; }
+.churchLife,
+.sermonSection { padding: 70px clamp(18px, 8vw, 115px); }
+.churchLife { background: #f6f5ef; }
+.sectionHeading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 25px; }
+.sectionHeading > div > span { color: #8b705a; }
+.sectionHeading h2 { margin: 8px 0 0; color: #2e4035; font-family: var(--font-display), sans-serif; font-size: clamp(30px, 4vw, 43px); font-weight: 500; }
+.sectionIndex { color: #9da196; font-family: var(--font-mono), monospace; font-size: 8px; }
+.eventGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 17px; }
+.eventGrid article { min-width: 0; }
+.eventArt { position: relative; display: flex; height: 150px; flex-direction: column; align-items: center; justify-content: center; gap: 11px; background: #dae5d2; color: #637d58; }
+.eventArt > span { font-family: var(--font-mono), monospace; font-size: 8px; letter-spacing: .07em; }
+.eventArtAlt { background: #e5ded2; color: #8a7057; }
+.eventArtWarm { background: #e7d8c9; color: #936b4d; }
+.eventGrid article > small { display: block; margin-top: 15px; color: #8c907f; font-size: 7px; }
+.eventGrid h3 { margin: 7px 0 5px; color: #38493d; font-family: var(--font-display), sans-serif; font-size: 17px; font-weight: 500; }
+.eventGrid article > p { max-width: 300px; margin: 0; color: #7d8277; font-size: 9px; line-height: 1.6; }
+.sermonSection { background: #e9e9df; }
+.sermonSection .sectionHeading { margin-bottom: 18px; }
+.churchFilters { display: flex; flex-wrap: wrap; gap: 5px; }
+.churchFilters button { min-height: 28px; border: 1px solid transparent; border-radius: 20px; padding: 0 10px; background: transparent; color: #767b70; cursor: pointer; font-size: 9px; }
+.churchFilters button[aria-pressed="true"] { border-color: #9bae8a; background: #f5f6ef; color: #425b43; }
+.sermonList { border-top: 1px solid #d6d9cd; }
+.sermonRow { display: grid; min-height: 65px; grid-template-columns: 30px 34px minmax(0, 1fr) auto 45px; align-items: center; gap: 13px; border-bottom: 1px solid #d6d9cd; }
+.sermonNumber { color: #92978b; font-family: var(--font-mono), monospace; font-size: 8px; }
+.playButton { display: grid; width: 29px; height: 29px; place-items: center; border: 1px solid #c6d0bb; border-radius: 50%; background: #f7f7f1; color: #53744d; cursor: pointer; font-size: 8px; }
+.sermonRow h3 { margin: 0 0 4px; color: #344339; font-family: var(--font-display), sans-serif; font-size: 12px; font-weight: 500; }
+.sermonRow > div > span { color: #858a7f; font-size: 8px; }
+.sermonTopic { border-radius: 20px; padding: 5px 7px; background: #f3f4ed; color: #77836d; font-family: var(--font-mono), monospace; font-size: 7px; }
+.sermonDuration { color: #92978b; font-family: var(--font-mono), monospace; font-size: 8px; text-align: right; }
+.communityDemoNote { margin: 14px 0 0; color: #92968a; font-family: var(--font-mono), monospace; font-size: 7px; }
+.visitSection { display: grid; grid-template-columns: 1fr minmax(280px, .75fr); align-items: center; gap: 60px; padding: 68px clamp(18px, 8vw, 115px); background: #dce6d2; }
+.visitSection > div > span { color: #6f8066; }
+.visitSection h2 { margin: 10px 0; color: #30493a; font-family: var(--font-display), sans-serif; font-size: clamp(34px, 4.5vw, 55px); font-weight: 500; }
+.visitSection > div > p { color: #6c7768; font-size: 10px; line-height: 1.6; }
+.visitForm { display: flex; flex-direction: column; gap: 11px; border: 1px solid #c7d3bd; border-radius: 5px; padding: 18px; background: #f7f8f2; }
+.visitForm label { display: flex; flex-direction: column; gap: 6px; color: #747c6d; font-size: 9px; }
+.visitForm input,.visitForm select { min-height: 34px; border: 1px solid #e1e6db; border-radius: 3px; padding: 0 8px; background: #fff; color: #3b493c; font: inherit; font-size: 10px; }
+.visitForm > button { display: inline-flex; min-height: 37px; align-items: center; justify-content: space-between; border: 0; border-radius: 3px; padding: 0 11px; background: #385742; color: white; cursor: pointer; font-size: 9px; }
+.visitForm > small { color: #92978a; font-size: 8px; line-height: 1.5; }
+.visitSuccess { display: flex; align-items: flex-start; gap: 9px; color: #56744d; }
+.visitSuccess b { display: block; margin-bottom: 5px; color: #425a3d; font-size: 10px; }
+.visitSuccess small { color: #798772; font-size: 8px; line-height: 1.5; }
+
+.schoolSite { min-height: calc(100vh - 43px); background: #f6f7f2; color: #28372f; }
+.schoolHeader { display: grid; min-height: 68px; grid-template-columns: 1fr 1.4fr 1fr; align-items: center; padding-inline: clamp(18px, 5vw, 76px); background: #f6f7f2; }
+.schoolLogo { display: inline-flex; width: fit-content; align-items: center; gap: 8px; color: #324c3c; font-family: var(--font-display), sans-serif; font-size: 18px; font-weight: 600; text-decoration: none; }
+.schoolLogo > span:last-child { color: #bb7556; }
+.schoolLogoIcon { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 8px; background: #e2edd6; color: #526c4b; }
+.schoolHeader nav { display: flex; justify-content: center; gap: 23px; }
+.schoolHeader nav button { border: 0; background: transparent; color: #737e72; cursor: pointer; font-size: 9px; }
+.schoolVisitLink { display: inline-flex; align-items: center; justify-self: end; gap: 7px; border-bottom: 1px solid #68815e; padding: 6px 0; color: #4d6b49; font-size: 9px; text-decoration: none; }
+.schoolHero { position: relative; display: flex; min-height: clamp(400px, 54vw, 590px); align-items: center; overflow: hidden; background: #54705c; color: #fffdf5; }
+.schoolHero > img { object-fit: cover; object-position: center 44%; }
+.schoolHeroShade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(37, 61, 48, .82), rgba(37, 61, 48, .21) 70%); }
+.schoolHeroCopy { position: relative; z-index: 1; max-width: 720px; padding: 70px clamp(22px, 9vw, 130px); }
+.schoolHeroCopy > span,.schoolHeroFoot,.schoolIntro > span,.schoolSectionHead > div > span,.schoolVisit > div > span { font-family: var(--font-mono), monospace; font-size: 8px; letter-spacing: .12em; }
+.schoolHeroCopy > span { color: #dcebbf; }
+.schoolHeroCopy h1 { margin: 18px 0 13px; font-family: var(--font-display), sans-serif; font-size: clamp(50px, 8vw, 90px); font-weight: 500; line-height: .95; white-space: pre-line; }
+.schoolHeroCopy p { max-width: 400px; color: rgba(255,253,245,.83); font-size: 12px; line-height: 1.75; }
+.schoolHeroCopy button { display: inline-flex; align-items: center; gap: 9px; margin-top: 10px; border: 0; border-radius: 3px; padding: 11px 13px; background: #e3edcc; color: #40563e; cursor: pointer; font-size: 9px; font-weight: 600; }
+.schoolHeroFoot { position: absolute; right: 22px; bottom: 14px; left: 22px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,.4); padding-top: 8px; color: rgba(255,255,255,.77); font-size: 7px; }
+.schoolTabs { position: sticky; z-index: 5; top: 0; display: flex; justify-content: center; gap: 8px; border-bottom: 1px solid #e4e8df; padding: 10px; background: rgba(250,251,247,.96); backdrop-filter: blur(8px); }
+.schoolTabs button { min-height: 29px; border: 1px solid transparent; border-radius: 20px; padding: 0 13px; background: transparent; color: #778074; cursor: pointer; font-size: 9px; }
+.schoolTabs button[aria-selected="true"] { border-color: #ced9c2; background: #eaf0e3; color: #4a6747; }
+.schoolContent { min-height: 340px; padding: 63px clamp(18px, 8vw, 112px) 72px; }
+.schoolOverview { display: grid; grid-template-columns: 1.1fr .9fr; gap: 65px; align-items: center; }
+.schoolIntro > span,.schoolSectionHead > div > span { color: #8c755e; }
+.schoolIntro h2,.schoolSectionHead h2 { margin: 10px 0 12px; color: #304439; font-family: var(--font-display), sans-serif; font-size: clamp(30px, 4vw, 44px); font-weight: 500; }
+.schoolIntro > p { max-width: 470px; color: #747d71; font-size: 11px; line-height: 1.8; }
+.schoolIntro > button { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; border: 0; border-bottom: 1px solid #68815e; padding: 6px 0; background: transparent; color: #4d6b49; cursor: pointer; font-size: 9px; }
+.schoolFeatures { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.schoolFeatures > div { min-height: 135px; border-top: 1px solid #d7dfd1; padding-top: 12px; }
+.schoolFeatures > div > span { color: #8a9b7c; font-family: var(--font-mono), monospace; font-size: 8px; }
+.schoolFeatures h3 { margin: 15px 0 6px; color: #405244; font-family: var(--font-display), sans-serif; font-size: 15px; font-weight: 500; }
+.schoolFeatures p { margin: 0; color: #8b9187; font-size: 9px; line-height: 1.55; }
+.schoolSectionHead { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 22px; }
+.schoolSectionHead h2 { margin-bottom: 0; }
+.monthStepper { display: flex; align-items: center; gap: 12px; }
+.monthStepper button { display: grid; width: 29px; height: 29px; place-items: center; border: 1px solid #dce2d7; border-radius: 50%; background: transparent; color: #53694f; cursor: pointer; font-size: 16px; }
+.monthStepper b { color: #52634f; font-family: var(--font-mono), monospace; font-size: 9px; font-weight: 500; }
+.schoolEventList { border-top: 1px solid #e0e5dc; }
+.schoolEventList article { display: flex; min-height: 67px; align-items: center; gap: 15px; border-bottom: 1px solid #e0e5dc; }
+.eventDate { display: flex; width: 39px; flex-direction: column; align-items: center; color: #506b4a; }
+.eventDate b { font-family: var(--font-display), sans-serif; font-size: 20px; font-weight: 500; }
+.eventDate small { color: #92988d; font-family: var(--font-mono), monospace; font-size: 7px; text-transform: uppercase; }
+.schoolEventList article > div { flex: 1; }
+.schoolEventList article > div span { color: #999e93; font-family: var(--font-mono), monospace; font-size: 7px; }
+.schoolEventList article h3 { margin: 4px 0 0; color: #455347; font-family: var(--font-display), sans-serif; font-size: 13px; font-weight: 500; }
+.schoolEventList article > svg { color: #92a187; }
+.schoolSampleNote { color: #969b91; font-family: var(--font-mono), monospace; font-size: 7px; }
+.schoolAdmissions > p,.schoolResources > p { color: #828a7d; font-size: 10px; }
+.checklistProgress { border-radius: 20px; padding: 7px 10px; background: #e7efdf; color: #617b55; font-family: var(--font-mono), monospace; font-size: 8px; }
+.admissionsSteps { max-width: 820px; border-top: 1px solid #e0e5dc; margin-top: 22px; }
+.admissionStep { display: grid; min-height: 57px; grid-template-columns: 18px 30px 1fr 18px; align-items: center; gap: 9px; border-bottom: 1px solid #e0e5dc; color: #505d50; cursor: pointer; font-size: 10px; }
+.admissionStep input { accent-color: #739265; }
+.admissionNumber { color: #9ba394; font-family: var(--font-mono), monospace; font-size: 8px; }
+.admissionStep > svg { color: #88a478; opacity: 0; }
+.admissionStep:has(input:checked) > svg { opacity: 1; }
+.admissionStep:has(input:checked) > span:nth-child(3) { color: #90978c; text-decoration: line-through; }
+.resourceCards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 25px; }
+.resourceCards article { display: flex; min-height: 175px; flex-direction: column; align-items: flex-start; border: 1px solid #e1e6dc; border-radius: 4px; padding: 15px; background: #fff; }
+.resourceCards article > span { color: #718969; }
+.resourceCards h3 { margin: 20px 0 12px; color: #465348; font-family: var(--font-display), sans-serif; font-size: 14px; font-weight: 500; }
+.resourceCards button { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; border: 0; border-bottom: 1px solid #bbc9b1; padding: 5px 0; background: transparent; color: #55724d; cursor: pointer; font-size: 9px; }
+.schoolVisit { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 42px clamp(18px, 8vw, 112px); background: #e5ecdc; }
+.schoolVisit > div > span { color: #74856a; }
+.schoolVisit h2 { margin: 7px 0; color: #34493a; font-family: var(--font-display), sans-serif; font-size: 27px; font-weight: 500; }
+.schoolVisit p { margin: 0; color: #7e887b; font-size: 9px; }
+.schoolVisit > button { display: inline-flex; min-height: 37px; align-items: center; gap: 9px; border: 0; border-radius: 3px; padding: 0 12px; background: #456447; color: #fff; cursor: pointer; font-size: 9px; }
+
+.hotelSite { min-height: calc(100vh - 43px); background: #f5f1e8; color: #302923; }
+.hotelHeader { display: grid; min-height: 68px; grid-template-columns: 1fr 1.3fr 1fr; align-items: center; padding-inline: clamp(18px, 5vw, 78px); background: #f5f1e8; }
+.hotelLogo { color: #34372d; font-family: var(--font-display), sans-serif; font-size: 20px; font-weight: 500; text-decoration: none; }
+.hotelLogo span { color: #bb805b; }
+.hotelHeader nav { display: flex; justify-content: center; gap: 26px; }
+.hotelHeader nav a { color: #7e776b; font-size: 9px; text-decoration: none; }
+.hotelReserveLink { display: inline-flex; align-items: center; justify-self: end; gap: 8px; border-bottom: 1px solid #947053; padding: 6px 0; color: #73583f; font-size: 9px; text-decoration: none; }
+.hotelHero { position: relative; display: flex; min-height: clamp(420px, 56vw, 620px); align-items: center; overflow: hidden; background: #5b6254; color: #fffaf0; }
+.hotelHero > img { object-fit: cover; object-position: center 54%; }
+.hotelHeroShade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(36, 44, 38, .77), rgba(36, 44, 38, .1) 76%); }
+.hotelHeroCopy { position: relative; z-index: 1; max-width: 690px; padding: 75px clamp(22px, 9vw, 130px); }
+.hotelHeroCopy > span,.hotelHeroFoot,.hotelSectionHeading > div > span,.hotelLocation > span { color: #eed9b6; font-family: var(--font-mono), monospace; font-size: 8px; letter-spacing: .12em; }
+.hotelHeroCopy h1 { margin: 18px 0 13px; font-family: var(--font-display), sans-serif; font-size: clamp(51px, 8vw, 94px); font-weight: 500; line-height: .92; white-space: pre-line; }
+.hotelHeroCopy p { max-width: 390px; color: rgba(255,250,240,.82); font-size: 12px; line-height: 1.75; }
+.hotelHeroCopy > a { display: inline-flex; align-items: center; gap: 9px; margin-top: 10px; border-radius: 3px; padding: 11px 13px; background: #e9d8bd; color: #4a4638; font-size: 9px; text-decoration: none; }
+.hotelHeroFoot { position: absolute; right: 22px; bottom: 14px; left: 22px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,.4); padding-top: 9px; color: rgba(255,255,255,.75); font-size: 7px; }
+.hotelStory { display: grid; grid-template-columns: .5fr 1.5fr; gap: 30px; align-items: center; padding: 40px clamp(18px, 8vw, 110px); background: #e8e2d6; }
+.hotelStory > span { color: #9a765c; font-family: var(--font-mono), monospace; font-size: 8px; letter-spacing: .1em; }
+.hotelStory > p { max-width: 700px; margin: 0; color: #504539; font-family: var(--font-display), sans-serif; font-size: clamp(19px, 2.7vw, 30px); line-height: 1.4; }
+.hotelBooking { padding: 68px clamp(18px, 8vw, 110px) 76px; }
+.hotelSectionHeading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 23px; }
+.hotelSectionHeading > div > span { color: #9a765c; }
+.hotelSectionHeading h2 { margin: 8px 0 0; color: #3b3c32; font-family: var(--font-display), sans-serif; font-size: 37px; font-weight: 500; }
+.hotelSectionHeading > p { max-width: 300px; color: #837b6f; font-size: 9px; line-height: 1.6; }
+.hotelSearchForm { display: grid; grid-template-columns: 1fr 1fr .7fr auto; align-items: end; gap: 13px; border: 1px solid #ded8cb; border-radius: 5px; padding: 16px; background: #fbf9f4; }
+.hotelSearchForm label { display: flex; flex-direction: column; gap: 6px; color: #81796c; font-size: 9px; }
+.hotelSearchForm input,.hotelSearchForm select { min-height: 37px; border: 1px solid #e4dfd4; border-radius: 3px; padding: 0 8px; background: #fff; color: #403a31; font: inherit; font-size: 10px; }
+.hotelSearchForm > button { display: inline-flex; min-height: 37px; align-items: center; gap: 7px; border: 0; border-radius: 3px; padding: 0 12px; background: #59614c; color: #fff; cursor: pointer; font-size: 9px; }
+.roomResults { margin-top: 38px; }
+.roomResultHeading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 16px; }
+.roomResultHeading h3 { margin: 0; color: #414236; font-family: var(--font-display), sans-serif; font-size: 22px; font-weight: 500; }
+.roomResultHeading > span { color: #898174; font-family: var(--font-mono), monospace; font-size: 8px; }
+.hotelRoomGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 15px; }
+.hotelRoomCard { overflow: hidden; border: 1px solid #e3ddd1; border-radius: 4px; background: #fbf9f4; }
+.hotelRoomImage { position: relative; overflow: hidden; aspect-ratio: 1.35 / 1; background: #d6c9b5; }
+.hotelRoomImage img { object-fit: cover; }
+.hotelRoomInfo { padding: 13px; }
+.hotelRoomInfo h4 { margin: 0; color: #39392f; font-family: var(--font-display), sans-serif; font-size: 14px; font-weight: 500; }
+.hotelRoomInfo > p { margin: 5px 0 12px; color: #898174; font-size: 8px; }
+.hotelRoomInfo > div { display: flex; align-items: baseline; gap: 6px; }
+.hotelRoomInfo > div strong { color: #514638; font-family: var(--font-mono), monospace; font-size: 11px; font-weight: 500; }
+.hotelRoomInfo > div span { color: #978e80; font-size: 8px; }
+.hotelRoomButton,.hotelRoomSelected { display: inline-flex; min-height: 32px; align-items: center; justify-content: center; gap: 6px; margin-top: 12px; border: 1px solid #b9b5a7; border-radius: 3px; padding: 0 9px; background: transparent; color: #62604e; cursor: pointer; font-size: 8px; }
+.hotelRoomSelected { border-color: #58664d; background: #e8ede1; color: #45543d; }
+.hotelConfirm { display: flex; align-items: center; justify-content: space-between; gap: 15px; border-top: 1px solid #ded8cb; margin-top: 20px; padding-top: 14px; color: #5a574b; font-size: 9px; }
+.hotelConfirm > button { display: inline-flex; align-items: center; gap: 8px; border: 0; border-radius: 3px; padding: 10px 12px; background: #59614c; color: white; cursor: pointer; font-size: 9px; }
+.hotelConfirm > p { display: flex; align-items: center; gap: 7px; color: #536747; font-weight: 600; }
+.hotelConfirm small { display: block; margin-left: 5px; color: #87907b; font-size: 8px; font-weight: 400; }
+.hotelDemoNote { margin-top: 19px; color: #999184; font-family: var(--font-mono), monospace; font-size: 7px; text-align: center; }
+.hotelAmenities { padding: 64px clamp(18px, 8vw, 110px) 72px; background: #ece7dc; }
+.hotelAmenities .hotelSectionHeading { margin-bottom: 26px; }
+.amenityGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.amenityGrid article { border-top: 1px solid #d4ccbd; padding-top: 12px; }
+.amenityGrid article > span { color: #a2876c; font-family: var(--font-mono), monospace; font-size: 8px; }
+.amenityGrid h3 { margin: 16px 0 6px; color: #464538; font-family: var(--font-display), sans-serif; font-size: 15px; font-weight: 500; }
+.amenityGrid p { max-width: 270px; margin: 0; color: #827a6e; font-size: 9px; line-height: 1.6; }
+.hotelLocation { display: flex; min-height: 210px; flex-direction: column; align-items: center; justify-content: center; padding: 40px 18px; background: #59614c; color: #f8f4e9; text-align: center; }
+.hotelLocation > span { color: #dfd4b8; }
+.hotelLocation h2 { margin: 10px 0 6px; font-family: var(--font-display), sans-serif; font-size: clamp(25px, 4vw, 38px); font-weight: 500; }
+.hotelLocation p { color: rgba(255,255,255,.75); font-size: 9px; }
+.hotelLocation a { display: inline-flex; align-items: center; gap: 7px; margin-top: 7px; color: #f1dfc2; font-size: 9px; text-decoration: none; }
+
+@media (max-width: 900px) {
+  .churchIntro { grid-template-columns: 1fr 1.3fr; }
+  .churchIntro > a { grid-column: 2; }
+  .schoolOverview { grid-template-columns: 1fr; gap: 30px; }
+  .hotelRoomGrid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 700px) {
+  .previewBar { min-height: 42px; grid-template-columns: 1fr auto; padding-inline: 12px; }
+  .previewLabel { display: none; }
+  .communityFooter { flex-wrap: wrap; min-height: 68px; padding: 13px 18px; }
+  .communityFooter > span:last-child { width: 100%; }
+  .churchHeader,.schoolHeader,.hotelHeader { min-height: 58px; grid-template-columns: 1fr auto; padding-inline: 15px; }
+  .churchHeader nav,.schoolHeader nav,.hotelHeader nav { grid-row: 2; grid-column: 1 / -1; justify-content: flex-start; gap: 17px; overflow-x: auto; padding: 0 0 10px; }
+  .churchHero,.schoolHero,.hotelHero { min-height: 470px; }
+  .churchHeroCopy,.schoolHeroCopy,.hotelHeroCopy { padding: 64px 21px 82px; }
+  .churchHeroCopy h1,.schoolHeroCopy h1,.hotelHeroCopy h1 { font-size: clamp(48px, 12vw, 68px); }
+  .churchIntro { grid-template-columns: 1fr; gap: 9px; padding: 24px 20px; }
+  .churchIntro > a { grid-column: auto; }
+  .churchLife,.sermonSection { padding: 48px 18px; }
+  .sectionHeading,.schoolSectionHead,.hotelSectionHeading { align-items: flex-start; flex-direction: column; }
+  .eventGrid { grid-template-columns: 1fr; gap: 25px; }
+  .eventArt { height: 130px; }
+  .sermonRow { grid-template-columns: 23px 30px minmax(0, 1fr) auto; gap: 8px; }
+  .sermonTopic { display: none; }
+  .visitSection { grid-template-columns: 1fr; gap: 23px; padding: 48px 18px; }
+  .schoolContent { padding: 44px 18px 52px; }
+  .schoolTabs { justify-content: flex-start; overflow-x: auto; }
+  .schoolTabs button { flex: 0 0 auto; }
+  .schoolFeatures { gap: 12px; }
+  .schoolFeatures > div { min-height: 130px; }
+  .resourceCards { grid-template-columns: 1fr; }
+  .resourceCards article { min-height: 130px; }
+  .schoolVisit { align-items: flex-start; flex-direction: column; padding: 30px 18px; }
+  .hotelStory { grid-template-columns: 1fr; gap: 12px; padding: 31px 20px; }
+  .hotelBooking,.hotelAmenities { padding: 48px 18px; }
+  .hotelSearchForm { grid-template-columns: 1fr 1fr; }
+  .hotelSearchForm > button { grid-column: 1 / -1; }
+  .hotelRoomGrid,.amenityGrid { grid-template-columns: 1fr; }
+  .roomResultHeading { align-items: flex-start; flex-direction: column; }
+  .hotelConfirm { align-items: flex-start; flex-direction: column; }
+}
