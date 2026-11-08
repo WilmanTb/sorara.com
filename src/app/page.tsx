@@ -61,7 +61,7 @@ export default function Home() {
         <div className="wrap">
           <div className="section-heading-row"><div><p className="eyebrow">Selected concepts / 2025—26</p><h2 className="display-title">Good ideas,<br /><span>made tangible.</span></h2></div><p className="section-intro">A few glimpses of what thoughtful digital design can make possible. Each project is a concept, built to show the kind of work we love doing. Explore a live preview page for each concept to see its design direction, key features, and the thinking behind it.</p></div>
           <div className="home-project-grid">
-            {projects.slice(0, 6).map((project, index) => (
+            {projects.map((project, index) => (
               <Link className={`home-project home-project-${index + 1}`} href={`/work/${project.slug}`} key={project.slug}>
                 <div className={`project-visual visual-${project.slug}`}>
                   {project.slug === "shopora" ? <div className="shopora-visual"><span className="visual-label">SHOPORA / YOUR NEW FAVORITE THING</span><div className="shopora-product"><div className="product-sun" /><div className="product-chair" /><span>THE EVERYDAY CHAIR<br /><b>$240</b></span></div><div className="shopora-word">Shop<br />better.</div></div> : null}
@@ -70,6 +70,7 @@ export default function Home() {
                   {project.slug === "gather-church" ? <div className="gather-visual"><Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 700px) 100vw, 65vw" /><div className="gather-overlay"><span>A PLACE TO BELONG</span><strong>Find your<br />people.</strong><small>SUNDAYS / 10:00 AM</small></div></div> : null}
                   {project.slug === "brightpath-school" ? <div className="campus-visual"><Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 700px) 100vw, 40vw" /><div className="campus-overlay"><span>LEARN / GROW / BELONG</span><strong>A bright<br />place to begin.</strong><small>DISCOVER BRIGHTPATH</small></div></div> : null}
                   {project.slug === "harborlight-hotel" ? <div className="hotel-visual"><Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 700px) 100vw, 40vw" /><div className="hotel-overlay"><span>HARBORLIGHT / A BOUTIQUE STAY</span><strong>Stay a little<br />longer.</strong><small>ROOMS / RITUALS / REST</small></div></div> : null}
+                  {project.slug === "admin-dashboard" || project.slug === "cashier-app" ? <div className="hotel-visual"><Image src={project.image} alt={project.imageAlt} fill sizes="(max-width: 700px) 100vw, 33vw" /><div className="hotel-overlay"><span>{project.slug === "admin-dashboard" ? "NORTHSTAR / OPERATIONS" : "COUNTERPOINT / POINT OF SALE"}</span><strong>{project.title}</strong><small>{project.slug === "admin-dashboard" ? "USERS / PRODUCTS / REPORTS" : "MINIMARKET / COFFEE / STORE"}</small></div></div> : null}
                   <span className="concept-mark">CONCEPT PROJECT</span>
                 </div>
                 <div className="project-meta"><div><span className="project-category">{project.category}</span><h3>{project.title}</h3></div><span className="project-arrow"><ArrowUpRight size={19} /></span></div>
@@ -78,7 +79,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="work-cta"><Link href="/work" className="text-link">Explore all projects <ArrowRight size={17} /></Link><span>06 / 06 CONCEPTS</span></div>
+          <div className="work-cta"><Link href="/work" className="text-link">Explore all projects <ArrowRight size={17} /></Link><span>{String(projects.length).padStart(2, "0")} / {String(projects.length).padStart(2, "0")} CONCEPTS</span></div>
         </div>
       </section>
 

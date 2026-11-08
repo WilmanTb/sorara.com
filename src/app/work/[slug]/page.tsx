@@ -39,7 +39,7 @@ async function ProjectContent({ params }: ProjectPageProps) {
   if (!project) notFound();
 
   const relatedProjects = projects.filter((item) => item.slug !== project.slug).slice(0, 2);
-  const hasInteractiveDemo = ["manageflow", "shopora", "dinenow", "gather-church", "brightpath-school", "harborlight-hotel"].includes(project.slug);
+  const hasInteractiveDemo = ["manageflow", "shopora", "dinenow", "gather-church", "brightpath-school", "harborlight-hotel", "admin-dashboard", "cashier-app"].includes(project.slug);
 
   return (
     <>

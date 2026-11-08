@@ -3,10 +3,12 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import ConceptDemo from "@/components/demos/concept-demo";
 import CommunityDemo, { type CommunityDemoSlug } from "@/components/demos/community-demos";
+import OperationsDemo, { type OperationsDemoSlug } from "@/components/demos/operations-demos";
 
 const productDemoSlugs = ["manageflow", "shopora", "dinenow"] as const;
 const communityDemoSlugs = ["gather-church", "brightpath-school", "harborlight-hotel"] as const;
-const demoSlugs = [...productDemoSlugs, ...communityDemoSlugs];
+const operationsDemoSlugs = ["admin-dashboard", "cashier-app"] as const;
+const demoSlugs = [...productDemoSlugs, ...communityDemoSlugs, ...operationsDemoSlugs];
 type ProductDemoSlug = (typeof productDemoSlugs)[number];
 type DemoSlug = (typeof demoSlugs)[number];
 type DemoPageProps = { params: Promise<{ slug: string }> };
@@ -25,6 +27,8 @@ export async function generateMetadata({ params }: DemoPageProps): Promise<Metad
     "gather-church": "Gather Church",
     "brightpath-school": "Brightpath School",
     "harborlight-hotel": "Harborlight Hotel",
+    "admin-dashboard": "Admin Dashboard",
+    "cashier-app": "Cashier App",
   };
   return {
     title: `${name[slug as DemoSlug]} — Demo Konsep Interaktif`,
@@ -45,6 +49,7 @@ export default function IndonesianDemoPage({ params }: DemoPageProps) {
 async function DemoContent({ params }: DemoPageProps) {
   const { slug } = await params;
   if (!demoSlugs.includes(slug as DemoSlug)) notFound();
+  if ((operationsDemoSlugs as readonly string[]).includes(slug)) return <OperationsDemo slug={slug as OperationsDemoSlug} locale="id" />;
   if ((communityDemoSlugs as readonly string[]).includes(slug)) return <CommunityDemo slug={slug as CommunityDemoSlug} locale="id" />;
   return <ConceptDemo slug={slug as ProductDemoSlug} locale="id" />;
 }

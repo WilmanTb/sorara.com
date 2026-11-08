@@ -1,12 +1,16 @@
 
 import type { NextConfig } from "next";
+import { PHASE_DEVELOPMENT_SERVER } from "next/constants";
+import { siteConfig } from "./src/lib/site-config";
 
-const nextConfig: NextConfig = {
+export default function nextConfig(phase: string): NextConfig {
+  const deploymentPath = new URL(siteConfig.url).pathname.replace(/\/$/, "");
+  return {
   // Enable static export for GitHub Pages
   output: "export",
 
   // GitHub repository name
-  basePath: "/sorara.com",
+  basePath: phase === PHASE_DEVELOPMENT_SERVER ? "" : deploymentPath,
 
   // Generate URLs with trailing slashes
   trailingSlash: true,
@@ -21,6 +25,5 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-};
-
-export default nextConfig;
+  };
+}

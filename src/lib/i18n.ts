@@ -111,6 +111,22 @@ const indonesianProjectCopy: Record<string, Partial<Project>> = {
     features: ["Informasi penerimaan dan pendaftaran", "Kalender sekolah dan pengumuman", "Pendekatan belajar dan gambaran kampus", "Pusat sumber daya orang tua dan siswa"],
     imageAlt: "Ruang kelas yang terang dan siap digunakan untuk belajar",
   },
+  "admin-dashboard": {
+    shortDescription: "Ruang kerja contoh untuk tim, katalog, pesanan, dan pelaporan.",
+    overview: "Northstar adalah konsep dasbor admin fiktif dengan tujuh menu: Ringkasan, Pengguna, Produk, Pesanan, Laporan, Aktivitas, dan Pengaturan. Data contoh dapat ditambah, diperbarui, dan dihapus selama sesi. Demo ini bukan panel admin SORARA dan tidak menerapkan autentikasi atau kontrol akses sungguhan.",
+    problem: "Tim kehilangan waktu ketika pengelolaan pengguna, inventaris, status pesanan, dan laporan tersebar di berbagai alat.",
+    solution: "Ruang kerja operasional yang terarah menyatukan CRUD contoh, pencarian, status publikasi, pemrosesan pesanan, laporan CSV, dan aktivitas sesi dalam satu antarmuka.",
+    features: ["Tujuh menu dasbor yang dapat digunakan", "Peran demo dan status pengguna", "Pembuatan produk, stok, dan publikasi", "Status pesanan dan ekspor laporan CSV", "Aktivitas sesi dan pengaturan ruang kerja"],
+    imageAlt: "Laptop menampilkan analitik bisnis di meja kerja",
+  },
+  "cashier-app": {
+    shortDescription: "Konsep kasir praktis untuk minimarket, kedai kopi, atau toko.",
+    overview: "Counterpoint adalah aplikasi kasir fiktif dengan mode minimarket, kedai kopi, dan toko. Demo ini mencakup pencarian produk atau kode, stok, jumlah barang, diskon IDR, pembayaran tunai atau digital simulasi, kembalian, serta riwayat struk. Tidak ada pembayaran atau pesanan nyata yang diproses.",
+    problem: "Kasir perlu mencari produk dengan cepat, menghitung total dengan akurat, menjaga stok, dan menemukan transaksi tanpa memperlambat antrean.",
+    solution: "Katalog yang mudah dipindai dan panel transaksi yang jelas menampilkan keranjang, stok, diskon, uang diterima, dan kembalian selama transaksi simulasi.",
+    features: ["Mode minimarket, kedai kopi, dan toko", "Pencarian nama dan kode produk", "Keranjang dan jumlah sesuai stok", "Diskon, uang diterima, dan kembalian", "Checkout simulasi dan riwayat struk"],
+    imageAlt: "Kopi yang disajikan di konter kedai",
+  },
   "harborlight-hotel": {
     shortDescription: "Tempat menginap yang tenang dan hangat untuk menikmati waktu di tepi laut.",
     overview: "Harborlight Hotel adalah konsep situs hotel butik fiktif yang membuat perencanaan liburan terasa setenang pengalaman menginapnya. Tamu dapat menjelajahi kamar, fasilitas, dan pratinjau ketersediaan dalam satu pengalaman yang nyaman.",

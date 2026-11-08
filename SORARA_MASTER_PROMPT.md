@@ -59,7 +59,7 @@ Include a strong dark hero with expressive typography, lime/lavender accents, th
 
 Create a responsive, visually varied gallery with category filters (All, Website, Web Application, Mobile Application, Business System), featured work, technology tags, descriptions, project links, and a meaningful empty state.
 
-Begin with six realistic fictional concepts, clearly labeled **Concept Project** or **Demo Project**:
+Include eight realistic fictional concepts, clearly labeled **Concept Project** or **Demo Project**:
 
 1. **Shopora** — e-commerce catalog, product detail, cart, checkout, and order-management concept.
 2. **ManageFlow** — business dashboard, statistics, data management, reporting, and workflows.
@@ -67,6 +67,8 @@ Begin with six realistic fictional concepts, clearly labeled **Concept Project**
 4. **Gather Church** — welcoming church website concept with service information, community events, sermon resources, and ministry groups.
 5. **Brightpath School** — school website concept with admissions, school calendar, learning information, and family resources.
 6. **Harborlight Hotel** — boutique hotel website concept with room discovery, amenity information, date-based availability preview, and a demo-only booking flow.
+7. **Admin Dashboard** — seven-menu sample operational workspace with users, products, orders, reports, activity, and settings. Not the real SORARA admin panel; no authentication or actual access control.
+8. **Cashier App** — minimarket, coffee-shop, and store point-of-sale concept with product/code search, stock-aware baskets, IDR discounts, simulated checkout, cash/change calculation, and receipt history. No real payments.
 
 Each project detail page includes overview, problem, proposed solution, features, visual gallery/previews, technology, optional demo link, related projects, contact CTA, and SEO metadata. Never imply concept projects are client work.
 
@@ -109,7 +111,7 @@ Use SQL Server and Prisma. Suggested relational entities: Admin, Project, Projec
 
 1. Foundation: Next.js, TypeScript, Tailwind, shadcn/ui, icons/motion, design tokens, layout, navigation, footer.
 2. Public pages and responsive visual polish.
-3. Six interactive concept project experiences: Shopora, ManageFlow, DineNow, Gather Church, Brightpath School, and Harborlight Hotel. Keep demo actions local and clearly distinguish simulated transactions from real payments, bookings, school inquiries, or church visit submissions.
+3. Eight interactive concept project experiences: Shopora, ManageFlow, DineNow, Gather Church, Brightpath School, Harborlight Hotel, Admin Dashboard, and Cashier App. Keep demo actions local and clearly distinguish simulated transactions from real payments, bookings, school inquiries, or church visit submissions. The dashboard concept must remain distinct from SORARA's future protected admin CMS.
 4. Prisma 7 + SQL Server, schema/migrations, server-side data access, settings, and image storage abstraction.
 5. Admin authentication and management routes.
 6. SEO, performance, accessibility, security, responsive checks, and deployment preparation.

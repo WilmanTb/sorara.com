@@ -3,6 +3,7 @@ import { IBM_Plex_Mono, Inter, Space_Grotesk, Geist } from "next/font/google";
 import SiteShell from "@/components/site-shell";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { siteConfig } from "@/lib/site-config";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -23,7 +24,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sorara.studio"),
+  metadataBase: new URL(`${siteConfig.url.replace(/\/$/, "")}/`),
   title: {
     default: "SORARA — Make your next idea real",
     template: "%s — SORARA",
