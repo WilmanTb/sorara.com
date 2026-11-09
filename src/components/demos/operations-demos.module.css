@@ -117,8 +117,9 @@
 .checkout { width: 100%; margin-top: 10px; min-height: 46px; }
 .app button:disabled { opacity: .45; cursor: not-allowed; }
 .safety { color: #8a998e; font-size: 10px; line-height: 1.8; }
+.addedNotice { position: fixed; z-index: 20; top: calc(env(safe-area-inset-top) + 54px); right: calc(env(safe-area-inset-right) + 16px); display: flex; align-items: center; gap: 10px; max-width: min(420px, calc(100vw - 32px)); padding: 14px 18px; border: 1px solid #b8d7c3; border-radius: 6px; background: #e7f3eb; color: #286044; box-shadow: 0 8px 24px #17231b24; font-size: 13px; }
 .error { color: #a7453b; font-size: 12px; }
-.receipt { max-width: 650px; background: #fff; border: 1px solid #dce5df; border-radius: 6px; padding: 24px; margin: 22px auto; }
+.receipt { max-width: 650px; background: #fff; border: 1px solid #dce5df; border-radius: 6px; padding: 24px; margin: 22px auto; scroll-margin-top: 12px; }
 .receipt p { font-size: 11px; color: #829386; line-height: 1.8; }
 .receipt hr { border: 0; border-top: 1px dashed #d6e1d8; }
 .productDialog { position: fixed; inset: 0; width: min(660px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow: auto; border: 1px solid #dce5df; border-radius: 7px; background: #fff; color: #334e3e; box-shadow: 0 24px 90px #0004; }

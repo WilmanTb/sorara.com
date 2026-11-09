@@ -59,7 +59,7 @@ export default function Home() {
 
       <section className="section-pad work-section" id="selected-work">
         <div className="wrap">
-          <div className="section-heading-row"><div><p className="eyebrow">Selected concepts / 2025—26</p><h2 className="display-title">Good ideas,<br /><span>made tangible.</span></h2></div><p className="section-intro">A few glimpses of what thoughtful digital design can make possible. Each project is a concept, built to show the kind of work we love doing. Explore a live preview page for each concept to see its design direction, key features, and the thinking behind it.</p></div>
+          <div className="section-heading-row"><div><p className="eyebrow">Selected concepts / 2025—26</p><h2 className="display-title">Good ideas,<br /><span>made tangible.</span></h2><p className="concept-note">These are concept projects—not client work—created as examples of what we could build for your business. Use them as a starting point to explore ideas and shape a solution around your needs.</p></div><p className="section-intro">Explore each live preview to see its design direction, key features, and the thinking behind it.</p></div>
           <div className="home-project-grid">
             {projects.map((project, index) => (
               <Link className={`home-project home-project-${index + 1}`} href={`/work/${project.slug}`} key={project.slug}>
@@ -95,7 +95,7 @@ export default function Home() {
         <div className="wrap"><div className="process-heading"><p className="eyebrow">A clear path, together</p><h2 className="display-title">From maybe<br />to <span>made.</span></h2><p>No mystery process. Just good questions, shared decisions, and a steady move from idea to launch.</p></div><div className="process-steps">{steps.map(([number, title, description]) => <article className="process-step" key={number}><span>{number}</span><div><h3>{title}</h3><p>{description}</p></div></article>)}</div></div>
       </section>
 
-      <section className="home-cta"><div className="wrap cta-inner"><div><p className="eyebrow">The next move is yours</p><h2 className="display-title">Have an idea?<br />Let&apos;s make <span>something great.</span></h2></div><div className="cta-side"><p>Tell us what you&apos;re thinking. We&apos;ll help you figure out the next step.</p><Link className="button-dark" href="/contact">Let&apos;s talk <ArrowUpRight size={18} /></Link><span className="cta-scribble">↗</span></div></div><div className="cta-bottom-mark">SORARA — MAKE YOUR NEXT IDEA REAL</div></section>
+      <section className="home-cta"><div className="wrap cta-inner"><div><p className="eyebrow">The next move is yours</p><h2 className="display-title">Have an idea?<br />Let&apos;s make <span>something great.</span></h2></div><div className="cta-side"><p>Tell us what you&apos;re thinking. We&apos;ll help you figure out the next step.</p><Link className="button-dark" href="/contact">Let&apos;s talk <ArrowUpRight size={18} /></Link></div></div><div className="cta-bottom-mark">SORARA — MAKE YOUR NEXT IDEA REAL</div></section>
     </>
   );
 }

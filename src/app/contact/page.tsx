@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 function getContactOptions() {
   const { whatsapp, email, phone, instagram, linkedin } = siteConfig.contact;
   const options = [
-    whatsapp ? { label: "WhatsApp", detail: "Start a direct conversation", href: `https://wa.me/${whatsapp.replace(/\D/g, "")}`, icon: MessageCircle, primary: true, external: true } : null,
+    whatsapp ? { label: "WhatsApp", detail: whatsapp, href: `https://wa.me/${whatsapp.replace(/\D/g, "").replace(/^0/, "62")}`, icon: MessageCircle, primary: true, external: true } : null,
     email ? { label: "Email", detail: email, href: `mailto:${email}`, icon: Mail, primary: false, external: false } : null,
     phone ? { label: "Phone", detail: phone, href: `tel:${phone.replace(/\s/g, "")}`, icon: Phone, primary: false, external: false } : null,
-    instagram ? { label: "Instagram", detail: "Follow along on Instagram", href: instagram, icon: AtSign, primary: false, external: true } : null,
+    instagram ? { label: "Instagram", detail: "@sorara_com", href: instagram, icon: AtSign, primary: false, external: true } : null,
     linkedin ? { label: "LinkedIn", detail: "Connect on LinkedIn", href: linkedin, icon: Globe, primary: false, external: true } : null,
   ];
   return options.filter((option): option is NonNullable<typeof option> => option !== null);
